@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonConsole", "JsonConsole\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{99898450-87BD-41D7-9A81-D146F11C7F05}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbConsole", "DbConsole\DbConsole.csproj", "{8D4CDB8D-F60E-445D-8531-2A4D11A6BAA9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{99898450-87BD-41D7-9A81-D146F11C7F05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99898450-87BD-41D7-9A81-D146F11C7F05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99898450-87BD-41D7-9A81-D146F11C7F05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D4CDB8D-F60E-445D-8531-2A4D11A6BAA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D4CDB8D-F60E-445D-8531-2A4D11A6BAA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D4CDB8D-F60E-445D-8531-2A4D11A6BAA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D4CDB8D-F60E-445D-8531-2A4D11A6BAA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

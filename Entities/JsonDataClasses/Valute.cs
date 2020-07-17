@@ -1,8 +1,12 @@
-﻿﻿namespace ParceData
+﻿﻿using Entities;
+ using Newtonsoft.Json;
+
+ namespace ParceData
 {
-    public class Valute
+    public class Valute : AuditableEntity
     {
-        public string Id { get; set; } 
+        [JsonProperty("Id")]
+        public string ValuteId { get; set; } 
         public string NumCode { get; set; } 
         public string CharCode { get; set; } 
         public int Nominal { get; set; } 
