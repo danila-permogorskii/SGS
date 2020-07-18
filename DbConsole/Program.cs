@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Infrastructure;
 using Infrastructure.DataAcess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
+using MySql.Data.MySqlClient;
 using ParceData;
 
 namespace DbConsole
@@ -22,6 +24,7 @@ namespace DbConsole
     {
         private static readonly AppDbContext _appDbContext;
         private static IValuteRepository _valuteRepository;
+        public static MySqlDataReader dr = StaticInitializerThatDoesNotThrow();
 
         static Program()
         {
@@ -29,7 +32,7 @@ namespace DbConsole
             _appDbContext = factory.CreateDbContext(null!);
             _valuteRepository = new ValuteRepository(_appDbContext);
         }
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             Console.WriteLine("Start!");
 

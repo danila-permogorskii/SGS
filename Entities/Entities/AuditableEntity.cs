@@ -9,5 +9,6 @@
         public DateTime CreatedAt { get; set; }
         [JsonIgnore]
         public DateTime ModifiedAt { get; set; }
+        
     }
 }

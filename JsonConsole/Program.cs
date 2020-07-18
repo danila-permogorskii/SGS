@@ -28,7 +28,7 @@ namespace JsonConsole
             foreach (var val in result.Valute)
             {
                 Console.WriteLine($"{val.Key} : \n" +
-                                  $"Id: {val.Value.ValuteId}\n" +
+                                  $"Id: {val.Value.ID}\n" +
                                   $"Name: {val.Value.Name}\n" +
                                   $"Nominal: {val.Value.Nominal}\n" +
                                   $"Previous: {val.Value.Previous}\n" +
