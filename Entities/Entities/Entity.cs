@@ -1,9 +1,11 @@
 ﻿﻿using System;
+ using Newtonsoft.Json;
 
-namespace Entities
+ namespace Entities
 {
     public abstract class Entity
     {
+        [JsonIgnore]
         public int ID { get; set; }
     }
 }
