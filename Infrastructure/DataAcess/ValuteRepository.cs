@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using ParceData;
+using Entities.JsonDataClasses;
 
 namespace Infrastructure.DataAcess
 {
@@ -24,5 +24,10 @@ namespace Infrastructure.DataAcess
         {
             throw new System.NotImplementedException();
         }
+
+        // public IReadOnlyList<Valute> GetAll()
+        // {
+        //     return _dbContext.Valutes.Where(v => v.NumCode).ToList();
+        // }
     }
 }

@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Infrastructure;
+using Entities.JsonDataClasses;
 using Infrastructure.DataAcess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
-using MySql.Data.MySqlClient;
-using ParceData;
 
 namespace DbConsole
 {
@@ -15,7 +13,8 @@ namespace DbConsole
         public AppDbContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
-            optionsBuilder.UseMySql("server=localhost;Port=3306;Database=testdb;Uid=root;Pwd=0000;");
+            optionsBuilder.UseMySql("server=localhost;Port=3306;Database=testdbsgs;Uid=root;Pwd=0000;", 
+                x => x.MigrationsAssembly("DbConsole"));
             return new AppDbContext(optionsBuilder.Options);
         }
     }
@@ -24,7 +23,7 @@ namespace DbConsole
     {
         private static readonly AppDbContext _appDbContext;
         private static IValuteRepository _valuteRepository;
-        public static MySqlDataReader dr = StaticInitializerThatDoesNotThrow();
+        // public static MySqlDataReader dr = StaticInitializerThatDoesNotThrow();
 
         static Program()
         {
@@ -45,6 +44,15 @@ namespace DbConsole
                 66.9191,
                 66.5617);
             _valuteRepository.Add(valute);
+            
+            Valute test = new Valute(
+                "test",
+                "test",
+                "test",
+                0,
+                "test",
+                0.0,
+                0.0);
         }
     }
 }

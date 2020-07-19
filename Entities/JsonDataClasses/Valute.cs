@@ -1,8 +1,6 @@
-﻿﻿using System.ComponentModel.DataAnnotations.Schema;
- using Entities;
- using Newtonsoft.Json;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
- namespace ParceData
+namespace Entities.JsonDataClasses
 {
     public class Valute : AuditableEntity
     {
@@ -30,6 +28,12 @@
             Value = value;
             CharCode = charCode;
             NumCode = numCode;
+        }
+
+        //For EF Core
+        public Valute()
+        {
+            
         }
     }
 }

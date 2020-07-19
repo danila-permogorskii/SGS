@@ -1,7 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
-using ParceData;
+﻿using Entities.JsonDataClasses;
+using Microsoft.EntityFrameworkCore;
 
-namespace Infrastructure
+namespace Infrastructure.DataAcess
 {
     public class AppDbContext : DbContext
     {
