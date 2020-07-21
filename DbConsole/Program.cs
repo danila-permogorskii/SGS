@@ -45,14 +45,7 @@ namespace DbConsole
                 66.5617);
             _valuteRepository.Add(valute);
             
-            Valute test = new Valute(
-                "test",
-                "test",
-                "test",
-                0,
-                "test",
-                0.0,
-                0.0);
+            
         }
     }
 }

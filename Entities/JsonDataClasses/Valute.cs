@@ -35,5 +35,16 @@ namespace Entities.JsonDataClasses
         {
             
         }
+
+        public override string ToString()
+        {
+            return ($"Id: {ID}\n" +
+                    $"Name: {Name}\n" +
+                    $"Nominal: {Nominal}\n" +
+                    $"Previous: {Previous}\n" +
+                    $"Value: {Value}\n" +
+                    $"CharCode:  {CharCode}\n" +
+                    $"NumCode: {NumCode}\n");
+        }
     }
 }

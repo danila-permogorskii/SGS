@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Entities.JsonDataClasses;
+using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.DataAcess
 {
@@ -20,14 +21,19 @@ namespace Infrastructure.DataAcess
         }
         
 
-        public void Get(Valute entity)
+        public Valute Get(Valute entity)
         {
             throw new System.NotImplementedException();
         }
 
-        // public IReadOnlyList<Valute> GetAll()
-        // {
-        //     return _dbContext.Valutes.Where(v => v.NumCode).ToList();
-        // }
+        public IReadOnlyList<Valute> GetAll()
+        {
+            return _dbContext.Valutes.ToList();
+        }
+
+        public Valute GetValuteById(string id)
+        {
+            return _dbContext.Valutes.Include(v => v.ID).FirstOrDefault(v => v.ID == id);
+        }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace Infrastructure.DataAcess
+﻿using System.Collections.Generic;
+
+namespace Infrastructure.DataAcess
 {
     public class Repository<TEntity> where TEntity : class
     {
@@ -18,6 +20,11 @@
         public virtual void Add(TEntity entity)
         {
             DbContext.Add(entity);
+        }
+
+        public virtual void AddList(List<TEntity> entities)
+        {
+            DbContext.AddRange(entities);
         }
 
         public virtual void Update(TEntity entity)

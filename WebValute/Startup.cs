@@ -33,7 +33,10 @@ namespace WebValute
             services.AddScoped<IValuteRepository, ValuteRepository>();
 
             services.AddDbContext<AppDbContext>(options =>
-                options.UseMySql(Configuration.GetConnectionString("MySqlConnectionString")));
+                options.UseMySql("server=localhost;Port=3306;Database=testdbsgs;Uid=root;Pwd=0000;"));
+
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

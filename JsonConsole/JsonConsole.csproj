@@ -10,6 +10,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\DbConsole\DbConsole.csproj" />
       <ProjectReference Include="..\Entities\Entities.csproj" />
     </ItemGroup>
 

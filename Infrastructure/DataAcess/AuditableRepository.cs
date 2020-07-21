@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net.Mime;
 using Entities;
 
@@ -15,6 +16,13 @@ namespace Infrastructure.DataAcess
         {
             entity.CreatedAt = DateTime.Now;
             base.Add(entity);
+            SaveChanges();
+        }
+        
+        public override void AddList(List<TEntity> entityList)
+        {
+            entityList.ForEach(e => e.CreatedAt = DateTime.Now);
+            base.AddList(entityList);
             SaveChanges();
         }
 
