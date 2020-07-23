@@ -1,0 +1,65 @@
+﻿@using Entities.JsonDataClasses
+@model IReadOnlyList<Valute>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewBag.Title = "Поиск по id валюты";
+    Layout = null;
+}
+
+<h2>Искомая валюта</h2>
+
+@* <div> *@
+@*     <form asp-action="Details"> *@
+@*         @Html.HiddenFor(p => p.ID) *@
+@*         <label>Введите индекс валюты</label> *@
+@*         <input asp-for="ID" class="form-control"/> *@
+@*     </form> *@
+@* </div> *@
+
+<table>
+    <thead>
+    <tr>
+        <th>Индекс</th>
+        <th>Наименвоание</th>
+        <th>Номинал</th>
+        <th>Предыдущее значение</th>
+        <th>Текущее значение</th>
+        <th>Кодировка</th>
+        <th>Численный код</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nominal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Previous)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Value)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CharCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumCode)
+                </td>
+                    
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    <a asp-action="Index">Вернуться к списку</a>
+</div>

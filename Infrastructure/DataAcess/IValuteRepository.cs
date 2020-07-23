@@ -7,6 +7,6 @@ namespace Infrastructure.DataAcess
     public interface IValuteRepository : ICanUpdateEntity<Valute>, ICanAddEntity<Valute>, ICanGetEntity<Valute>, ICanAddList<Valute>
     {
         IReadOnlyList<Valute> GetAll();
-        Valute GetValuteById(string id);
+        IReadOnlyList<Valute> GetValuteById(string id);
     }
 }

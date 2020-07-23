@@ -23,9 +23,10 @@ namespace WebValute.Controllers
         }
 
         [HttpGet("{id}")]
-        public Valute Get(string id)
+        public IReadOnlyList<Valute> Get(string id)
         {
             return _valuteRepository.GetValuteById(id);
+            
         }
     }
 }

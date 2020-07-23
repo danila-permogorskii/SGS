@@ -31,9 +31,9 @@ namespace Infrastructure.DataAcess
             return _dbContext.Valutes.ToList();
         }
 
-        public Valute GetValuteById(string id)
+        public IReadOnlyList<Valute> GetValuteById(string id)
         {
-            return _dbContext.Valutes.Include(v => v.ID).FirstOrDefault(v => v.ID == id);
+            return _dbContext.Valutes.Where(v => v.ID.ToLower().Contains(id.ToLower())).ToList();
         }
     }
 }

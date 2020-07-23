@@ -1,5 +1,6 @@
 ﻿using Infrastructure.DataAcess;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.TagHelpers;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace WebValute.Controllers
@@ -18,6 +19,12 @@ namespace WebValute.Controllers
         public ActionResult Index()
         {
             return View(_valuteRepository.GetAll());
+        }
+
+        [HttpGet("{id}")]
+        public ActionResult Details(string id)
+        {
+            return View(_valuteRepository.GetValuteById(id));
         }
     }
 }
