@@ -8,6 +8,5 @@ namespace Infrastructure.DataAcess
     {
         IReadOnlyList<Valute> GetAll();
         Valute GetValuteById(string id);
-
     }
 }

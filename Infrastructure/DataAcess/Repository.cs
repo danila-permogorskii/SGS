@@ -2,9 +2,8 @@
 
 namespace Infrastructure.DataAcess
 {
-    public class Repository<TEntity> where TEntity : class
+    public abstract class Repository<TEntity> where TEntity : class
     {
-
         protected readonly AppDbContext DbContext;
 
         public Repository(AppDbContext dbContext)

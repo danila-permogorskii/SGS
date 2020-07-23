@@ -43,7 +43,6 @@ namespace JsonConsole
             {
                 valutes.Add(v.Value);
                 _valuteRepository.Update(v.Value);
-                
             }
 
             // _valuteRepository.AddList(valutes);
